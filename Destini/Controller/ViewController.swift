@@ -24,15 +24,12 @@ class ViewController: UIViewController {
 		guard let answer = sender.currentTitle else { return }
 		storyBrain.nextStory(userChoice: answer)
 		updateUI()
-		
 	}
 	
 	func updateUI() {
-		let storyNumber = storyBrain.storyLine
-		let story = storyBrain.stories
-		storyText.text = story[storyNumber].title //storyBrain.stories[storyNumber].title
-		answerOne.setTitle(story[storyNumber].choice1, for: .normal)
-		answerTwo.setTitle(story[storyNumber].choice2, for: .normal)
+		storyText.text = storyBrain.getStoryText()
+		answerOne.setTitle(storyBrain.getAnswer1(), for: .normal)
+		answerTwo.setTitle(storyBrain.getAnswer2(), for: .normal)
 		if answerOne.currentTitle == "The End" {
 			answerTwo.isHidden = true
 		} else {

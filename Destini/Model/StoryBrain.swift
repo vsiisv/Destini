@@ -50,4 +50,16 @@ struct StoryBrain {
 			storyLine = stories[storyLine].destination2
 		}
 	}
+	
+	func getStoryText() -> String {
+		stories[storyLine].title
+	}
+	
+	func getAnswer1() -> String {
+		stories[storyLine].choice1
+	}
+	
+	func getAnswer2() -> String {
+		stories[storyLine].choice2
+	}
 }
