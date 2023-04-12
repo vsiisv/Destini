@@ -78,6 +78,7 @@ class ViewController: UIViewController {
 		let button = UIButton()
 		let image = UIImage(named: imageName)
 		button.titleLabel?.font = UIFont.systemFont(ofSize: 25)
+		button.titleLabel?.numberOfLines = 0
 		button.setBackgroundImage(image, for: .normal)
 		button.layer.cornerRadius = 20
 		button.addTarget(
